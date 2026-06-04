@@ -7,7 +7,7 @@ export const Route = createFileRoute("/_layout/")({
   head: () => ({
     meta: [
       {
-        title: "Dashboard - FastAPI Template",
+        title: "Dashboard - PlanWise",
       },
     ],
   }),
@@ -19,11 +19,20 @@ function Dashboard() {
   return (
     <div>
       <div>
-        <h1 className="text-2xl truncate max-w-sm">
-          Hi, {currentUser?.full_name || currentUser?.email} 👋
+        <h1 className="text-3xl font-bold">
+          Welcome to PlanWise!!
         </h1>
-        <p className="text-muted-foreground">
-          Welcome back, nice to see you again!!!
+
+        <p className="text-muted-foreground mt-2">
+          AI-Powered Productivity & Task Planning Platform
+        </p>
+
+        <p className="mt-6">
+          Logged in as:
+          {" "}
+          <strong>
+            {currentUser?.full_name || currentUser?.email}
+          </strong>
         </p>
       </div>
     </div>
